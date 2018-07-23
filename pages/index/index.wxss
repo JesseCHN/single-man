@@ -24,6 +24,7 @@ input {
   border: 1px solid #9E9E9E;
   border-radius: 5px;
   overflow: visible;
+  padding-left:30rpx;
 }
 
 .sub-title {
@@ -48,7 +49,7 @@ input {
 }
 
 .wanted {
-  width: 280rpx;
+  width: 250rpx;
 }
 
 .deliver-section {

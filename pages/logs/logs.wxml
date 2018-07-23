@@ -1,6 +1,50 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="container">
+  <!--点完分配对象-->
+  <view wx:if="{{false}}" class="main-section">
+    <text>
+      已提交分配请求
+      系统每天晚上8点自动分配
+      到时候开查看结果吧~
+    </text>
+  </view>
+  <!--分配到对象-->
+  <view wx:if="{{false}}" class="main-section">
+    <text>恭喜你分配成功🎉🎉🎉</text>
+    <text>
+      知乎昵称：
+      出生年份：
+      身高：
+      经济状况：
+    </text>
+    <button class="give-up-btn" type="warn" size="mini" bindtap="defaultTap">不合适，请重新匹配吧</button>
+  </view>
+  <view wx:if="{{false}}" class="main-section fail-section">
+    <text>
+      因男女人数、
+      要求不符合等原因，
+      本次未能分配到合适的对象
+      系统已为你自动加入到明晚的匹配
+
+      Tips: 将小程序转发到讨论组，系统记录你的转发行为，将大幅提高你在分配队列中的排名！
+    </text>
+    <button class="deliver-btn" type="warn" bindtap="defaultTap">转发小程序 提高分配成功率</button>
+    <view>然后</view>
+    <button class="next-btn" type="warn" bindtap="defaultTap">报名下一场的分配</button>
+  </view>
+
+  <view wx:if="{{true}}" class="main-section refuse-section">
+    <view>
+      <image src="../../static/sad.png" style="width: 200px; height: 200px;"></image>
+    </view>
+    <text>
+      好像对方觉得你不合适，报名下一场吧......
+    </text>
+    <button class="next-btn" type="warn" bindtap="defaultTap">报名下一场的分配</button>
+  </view>
+  <view class="modify-select">
+    <button type="default" size="mini" bindtap="defaultTap">
+     修改条件
+    </button>
+  </view>
 </view>

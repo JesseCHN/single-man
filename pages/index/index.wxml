@@ -23,7 +23,7 @@
       <input id="nickname" />
     </view>
     <view>
-      <label class="sub-title">出生年月：</label>
+      <label class="sub-title">出生年份：</label>
       <input placeholder="请输入出生年份，例：1990" placeholder-class="pd-adjust" />
     </view>
     <view>

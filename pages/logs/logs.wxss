@@ -1,8 +1,34 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.main-section {
+  padding: 25vh 0;
+  text-align: center;
+  font-size: 38rpx;
+  color: #ac5fb9;
+  height: 30vh;
 }
-.log-item {
-  margin: 10rpx;
+.fail-section {
+  padding: 10vh 0;
+  height: 60vh;
+}
+.refuse-section {
+  padding: 15vh 0;
+  height: 50vh;
+}
+.modify-select {
+  position: relative;
+}
+.modify-select button {
+  position: absolute;
+  right: 100rpx;
+}
+.give-up-btn {
+  margin-top: 60rpx;
+}
+
+.deliver-btn {
+  margin-top: 20rpx;
+  display: inline-block;
+}
+
+.next-btn {
+  display: inline-block;
 }
