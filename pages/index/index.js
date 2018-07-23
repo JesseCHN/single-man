@@ -29,6 +29,7 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        console.log(this.data.userInfo)
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -50,5 +51,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  randomDeliver: function() {
+    console.log('1111');
+    console.log(this)
   }
 })

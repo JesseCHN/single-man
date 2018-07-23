@@ -8,5 +8,9 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "缘来遇见妳",
     "navigationBarTextStyle":"black"
-  }
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true
 }

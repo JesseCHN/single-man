@@ -1,13 +1,86 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <view class="header">
+    <text>
+        基于“知乎”体系免费分配对象！
+      三观和，条件配，你情我愿，破冰相互了解~
+    </text>
+  </view>
+
+  <view class="auto-layout">
+    <text class="title">了解规则：</text>
+    <text class="article">
+      1、一分钟选填自己的知乎昵称、条件、和对另一半的要求，点“请分配”按钮；
+      2、系统搜集完所有当日需求，每晚8点自动分配，登录小程序查看自己的配对结果；因男女人数、要求不能完全对等，当日配对可能空白，请改日再来！
+      3、去知乎了解对方的三方、私信.....，后面请自由发挥啦。最后来小程序更改单身状态~~如果任意环节不合适，可以申请重新分配！
+    </text>
+  </view>
+
+  <view class="auto-layout">
+    <text class="title">关于自己：</text>
+    <view>
+      <label for="nickname" class="sub-title">知乎昵称：</label>
+      <input id="nickname" />
+    </view>
+    <view>
+      <label class="sub-title">出生年月：</label>
+      <input placeholder="请输入出生年份，例：1990" placeholder-class="pd-adjust" />
+    </view>
+    <view>
+      <label class="sub-title">性别：</label>
+      <radio-group class="radio-group" bindchange="radioChange">
+          <label><radio value="男" checked="true"/>男</label>
+          <label><radio value="女"/>女</label>
+      </radio-group>
+    </view>
+    <view>
+      <label class="sub-title">身高：</label>
+      <input placeholder="数字，无单位，例：175" placeholder-class="pd-adjust" />
+    </view>
+    <view>
+      <label class="sub-title">经济状况：</label>
+      <radio-group class="radio-group" bindchange="radioChange">
+          <label><radio value="1" checked="true"/>艰苦奋斗</label>
+          <label><radio value="2"/>小康</label>
+          <label><radio value="3"/>富足或更好</label>
+      </radio-group>
+    </view>
+  </view>
+
+
+  <view class="auto-layout">
+      <text class="title">对另一半的要求：</text>
+      <view>
+        <label for="nickname" class="sub-title">出生年份区间（不填代表不限）：</label>
+        <view>
+          <input class="wanted" placeholder="1980"  placeholder-class="pd-adjust" /><text> 到：</text><input class="wanted" placeholder="1995"  placeholder-class="pd-adjust" />
+        </view>
+      </view>
+      <view>
+        <label class="sub-title">身高区间（不填代表不限）：</label>
+        <view>
+          <input class="wanted" placeholder="140"  placeholder-class="pd-adjust" /><text> 到：</text><input class="wanted" placeholder="190"  placeholder-class="pd-adjust" />
+        </view>
+      </view>
+      <view>
+        <label class="sub-title">经济状况（多选，不填代表不限）：</label>
+        <checkbox-group class="radio-group" bindchange="radioChange">
+            <label><checkbox value="男" checked="true"/>艰苦奋斗</label>
+            <label><checkbox value="女"/>小康</label>
+            <label><checkbox value="女"/>富足或更好</label>
+        </checkbox-group>
+      </view>
+  </view>
+
+  <view class="deliver-section">
+    <button bindtap="randomDeliver" type="primary" size="mini"> 请分配吧 </button>
+  </view>
+
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  </view> -->
 </view>
